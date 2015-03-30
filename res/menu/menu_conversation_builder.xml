@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/add_node_button" android:title="@string/add_node" android:icon="@drawable/ic_content_new" android:showAsAction="ifRoom|withText" android:onClick="addNodeClick"></item>
+    <item android:id="@+id/delete_node_button" android:title="@string/delete" android:icon="@drawable/ic_content_discard" android:showAsAction="ifRoom|withText" android:onClick="deleteNodeClick"></item>
+    
+
+</menu>

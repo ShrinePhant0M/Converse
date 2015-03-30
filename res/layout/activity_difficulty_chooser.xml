@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <RelativeLayout
+        android:id="@+id/difficultyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <TextView 
+            android:id="@+id/difficultyInstructionsTextView"
+            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/difficulty_instruct"
+            android:gravity="center"
+            
+            />
+        <LinearLayout
+            android:id="@+id/seekBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/difficultyInstructionsTextView"
+             >
+
+            <SeekBar
+                android:id="@+id/diffSeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5sp"
+                android:layout_weight="1"
+                android:max="100"
+                android:progress="85" />
+
+            <TextView
+                android:id="@+id/diffSeekBarValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minEms="3" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/diffSeekBarText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seekBarLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal" />
+        <Button 
+            android:id="@+id/diffContinueButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/diffSeekBarText"
+            android:onClick="continueClick"
+            android:text="@string/continue_text"
+            
+            />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/diffListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" >
+    </ListView>
+
+</RelativeLayout>

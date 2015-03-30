@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.lehigh.converse"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/title_activity_main"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
+        <activity
+            android:name="edu.lehigh.converse.MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="edu.lehigh.converse.conversationbuilder.ConversationBuilderActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="edu.lehigh.converse.conversationbuilder.ConversationBuilderMenuActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="edu.lehigh.converse.conversationplayer.ConversationPlayerMenuActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="edu.lehigh.converse.conversationplayer.ConversationPlayerActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.dropbox.sync.android.DbxAuthActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dropbox.client2.android.AuthActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <data android:scheme="db-weur18iwxph2io4" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.dropbox.sync.android.DbxSyncService"
+            android:enabled="true"
+            android:exported="false"
+            android:label="Dropbox Sync" />
+
+        <activity
+            android:name="edu.lehigh.converse.DifficultyChooserActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+</manifest>

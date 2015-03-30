@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/add_convo_button"
+        android:icon="@drawable/ic_content_new"
+        android:onClick="addConversationClick"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/add_conversation">
+    </item>
+
+</menu>
